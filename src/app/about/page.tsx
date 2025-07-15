@@ -43,16 +43,16 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 pb-6 md:pb-12 relative z-10">
           <div className="flex flex-col items-start mb-8 md:mb-10">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-fisterra text-center md:text-left text-blue mb-2">
-              Discover the values of Fuentelo's Sparkling Grape Juice
+              Discover the values of Fuentelo&apos;s Sparkling Grape Juice
             </h1>
             <p className="text-sm md:text-base text-light-blue text-center md:text-left mb-3">
-              Rooted in Spain's winemaking heritage, we craft premium sparkling grape juice that turns everyday moments into celebrations—honoring the past, celebrating the present, and inspiring the future.
+              Rooted in Spain&apos;s winemaking heritage, we craft premium sparkling grape juice that turns everyday moments into celebrations—honoring the past, celebrating the present, and inspiring the future.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-left">
             <div>
               <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra text-rose mb-2">Celebration</h3>
-              <p className="text-rose text-sm md:text-base">Our drinks are made to elevate life's moments, turning everyday gatherings into unforgettable occasions.</p>
+              <p className="text-rose text-sm md:text-base">Our drinks are made to elevate life&apos;s moments, turning everyday gatherings into unforgettable occasions.</p>
             </div>
             <div>
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra text-rose mb-2">Excellence</h3>
@@ -60,7 +60,7 @@ export default function About() {
             </div>
             <div>
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra text-white-grape mb-2">Grit</h3>
-                <p className="text-white-grape text-sm md:text-base">Born from generations of farmers, we carry forward their relentless work ethic, perseverance, and determination in every bottle to meet you at the milestones you're chasing.</p>
+                <p className="text-white-grape text-sm md:text-base">Born from generations of farmers, we carry forward their relentless work ethic, perseverance, and determination in every bottle to meet you at the milestones you&apos;re chasing.</p>
             </div>
             <div>
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra text-white-grape mb-2">Tradition</h3>
@@ -99,7 +99,7 @@ export default function About() {
             Born in 1933 in La Alberca de Záncara, Abuelo Nemesio was a farmer devoted to his vineyards and family. Though he wasn't much of a wine drinker, he cherished mosto—sharing it with loved ones during the grape harvest, a time of unity and gratitude. His values of hard work, togetherness, and love for the land inspire everything we do.
           </p>
           <p className="text-light-blue mb-8 text-sm md:text-base">
-            Fuentelo's is our tribute to him. We craft our sparkling grape juices from the very grapes he once tended—Airén and Tempranillo varieties grown in La Mancha. More than a beverage, Fuentelo's is a celebration of legacy, family, and the joyful spirit of Spanish life.
+            Fuentelo&apos;s is our tribute to him. We craft our sparkling grape juices from the very grapes he once tended—Airén and Tempranillo varieties grown in La Mancha. More than a beverage, Fuentelo&apos;s is a celebration of legacy, family, and the joyful spirit of Spanish life.
           </p>
         </div>
       </section>
@@ -110,7 +110,10 @@ export default function About() {
           <div className="flex-1">
             <h2 className="font-fisterra text-3xl sm:text-4xl md:text-5xl text-blue mb-4 md:mb-4">THE ESSENCE OF CASTILLA-LA MANCHA IN EVERY SIP</h2>
             <p className="text-light-blue text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+              Experience the essence of Castilla-La Mancha with every sip of Fuentelo&apos;s Sparkling Grape Juice — a region where sun-drenched vineyards 
+              stretch across the Spanish horizon and tradition runs deep in the soil. Crafted from hand-selected grapes grown in this historic heartland, 
+              each bottle captures the vibrant spirit, natural sweetness, and refined character of the land. 
+              It&apos;s more than a drink — it&apos;s a celebration of culture, heritage, and the rich terroir of La Mancha in sparkling form.
             </p>
           </div>
           <div className="flex-1 flex justify-center">

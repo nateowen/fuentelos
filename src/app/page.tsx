@@ -21,7 +21,7 @@ export default function Home() {
             </div>
             <div className="flex-1 text-center">
               <h1 className="font-fisterra text-4xl sm:text-5xl md:text-6xl text-blue mb-2 px-2">
-                Celebrate Every Moment with Fuentelo's Premier
+                Celebrate Every Moment with Fuentelo&apos;s Premier
               </h1>
               {/* <p className="text-light-blue text-sm md:text-base mx-auto mb-2">
                 Indulge in the exquisite taste of our premium non-alcoholic sparkling grape juice, perfect for every celebration.
@@ -58,7 +58,7 @@ export default function Home() {
             To help people celebrate life's most joyous moments.
           </p>
           <p className="text-sm md:text-base text-blue max-w-3xl mb-8 md:mb-10">
-            Fuentelo's isn't just about taste—it's about creating lasting memories and bringing people together for moments that matter.
+            Fuentelo&apos;s isn&apos;t just about taste—it&apos;s about creating lasting memories and bringing people together for moments that matter.
           </p>
           <div className="mb-5">
             <MissionSlideshow />
@@ -130,7 +130,7 @@ export default function Home() {
           <div className="flex-1 text-center md:text-left">
             <h2 className="font-fisterra text-3xl sm:text-4xl md:text-5xl text-blue mb-4 md:mb-4">THE JOYS OF CHOOSING NON-ALCOHOLIC BEVERAGES</h2>
             <p className="text-light-blue text-sm md:text-base">
-              Opting for non-alcoholic beverages like Fuentelo's sparkling grape juice promotes a healthier lifestyle while ensuring everyone can join in the celebration. 
+              Opting for non-alcoholic beverages like Fuentelo&apos;s sparkling grape juice promotes a healthier lifestyle while ensuring everyone can join in the celebration. 
               Perfect for all ages, our drink allows you to savor the moment without the effects of alcohol.
             </p>
           </div>

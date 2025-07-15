@@ -53,7 +53,7 @@ export default function Beverages() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 py-6 md:py-8 px-0 md:px-6 text-blue/90 text-base text-left">
                 <div className="flex flex-col items-center justify-between gap-2 text-center">
-                  <span>Fuentelo's Rosé captures the vibrant essence of Spain's Tempranillo grape with its deep rose color releasing bright aromas of ripe strawberries, red cherries, and pomegranate, laced with hints of hibiscus and rose.</span>
+                  <span>Fuentelo&apos;s Rosé captures the vibrant essence of Spain&apos;s Tempranillo grape with its deep rose color releasing bright aromas of ripe strawberries, red cherries, and pomegranate, laced with hints of hibiscus and rose.</span>
                   {/* <Image src="/icons/TempranilloGrapes.svg" alt="Tempranillo Grapes" width={60} height={60} className="md:w-[80px] md:h-[80px]" /> */}
                   <Image src="/icons/Bubbles.svg" alt="Bubbles" width={80} height={80} className="md:w-[120px] md:h-[120px]" />
                 </div>
@@ -110,7 +110,7 @@ export default function Beverages() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 py-6 md:py-8 px-0 md:px-6 text-blue/90 text-base text-left">
                 <div className="flex flex-col items-center justify-between gap-2 text-center">
-                  <span>Fuentelo's White captures the vibrant essence of Spain's Airén grape with its bright color releasing aromas of fresh apple, pear, and white peach, laced with hints of citrus blossom and honey.</span>
+                  <span>Fuentelo&apos;s White captures the vibrant essence of Spain&apos;s Airén grape with its bright color releasing aromas of fresh apple, pear, and white peach, laced with hints of citrus blossom and honey.</span>
                   {/* <Image src="/icons/AirenGrapes.svg" alt="Airen Grapes" width={60} height={60} className="md:w-[80px] md:h-[80px]" /> */}
                   <Image src="/icons/Flower.svg" alt="Flower" width={70} height={70} className="md:w-[100px] md:h-[100px]" />
                 </div>
