@@ -77,7 +77,7 @@ const Navigation = () => {
             className="font-fisterra text-3xl lg:text-4xl text-neutral transition-colors"
             onClick={handleNavigation("/")}
           >
-            Fuentelo's
+            Fuentelo&apos;s
           </Link>
 
           {/* Navigation Items */}
@@ -112,7 +112,7 @@ const Navigation = () => {
             href="/"
             className="font-fisterra text-2xl text-neutral transition-colors"
           >
-            Fuentelo's
+            Fuentelo&apos;s
           </Link>
 
           {/* Hamburger Icon */}

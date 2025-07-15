@@ -55,7 +55,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <h2 className="font-fisterra text-3xl sm:text-4xl md:text-5xl text-blue mb-2 md:mb-4">OUR MISSION</h2>
           <p className="text-sm md:text-base text-blue max-w-3xl mb-2">
-            To help people celebrate life's most joyous moments.
+            To help people celebrate life&apos;s most joyous moments.
           </p>
           <p className="text-sm md:text-base text-blue max-w-3xl mb-8 md:mb-10">
             Fuentelo&apos;s isn&apos;t just about taste—it&apos;s about creating lasting memories and bringing people together for moments that matter.
@@ -95,7 +95,7 @@ export default function Home() {
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra mb-2 text-white-grape">Juice</h3>
                 <p className="text-sm md:text-base text-white-grape">
                 Once harvested, the grapes are gently pressed to extract their juice without compromising flavor or aroma. 
-                We use a cold-press method to preserve the grapes' natural freshness and prevent oxidation. 
+                We use a cold-press method to preserve the grapes&apos; natural freshness and prevent oxidation. 
                 Our white Airén grapes produce a clean, crisp juice with subtle floral notes, while brief contact with Tempranillo skins gives our rosé its soft hue. 
                 The result is a vibrant juice that captures the essence of the fruit.
                 </p>

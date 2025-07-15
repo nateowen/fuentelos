@@ -90,13 +90,13 @@ export default function About() {
           </div>
           <h2 className="font-fisterra text-3xl sm:text-4xl md:text-5xl text-blue mb-4 md:mb-4">A SPARKLING LEGACY FROM SPAIN</h2>
           <p className="text-light-blue mb-2 text-sm md:text-base">
-            Every summer for over 20 years, our family has returned to Spain—drawn to the warmth of our heritage and the simple joys of time spent together. Our mother's hometown, La Alberca de Záncara in Castilla-La Mancha, welcomed us with family meals, afternoon siestas, and the timeless rhythm of life in the countryside.
+            Every summer for over 20 years, our family has returned to Spain—drawn to the warmth of our heritage and the simple joys of time spent together. Our mother&apos;s hometown, La Alberca de Záncara in Castilla-La Mancha, welcomed us with family meals, afternoon siestas, and the timeless rhythm of life in the countryside.
           </p>
           <p className="text-light-blue mb-2 text-sm md:text-base">
             It was during one of these summers that we discovered <em>mosto</em>—a naturally sweet, sparkling grape juice made fresh at the local winery. Its vibrant flavor and purity instantly transported us, connecting us to something deeper: our roots, and the memory of our beloved grandfather, Nemesio.
           </p>
           <p className="text-light-blue mb-2 text-sm md:text-base">
-            Born in 1933 in La Alberca de Záncara, Abuelo Nemesio was a farmer devoted to his vineyards and family. Though he wasn't much of a wine drinker, he cherished mosto—sharing it with loved ones during the grape harvest, a time of unity and gratitude. His values of hard work, togetherness, and love for the land inspire everything we do.
+            Born in 1933 in La Alberca de Záncara, Abuelo Nemesio was a farmer devoted to his vineyards and family. Though he wasn&apos;t much of a wine drinker, he cherished mosto—sharing it with loved ones during the grape harvest, a time of unity and gratitude. His values of hard work, togetherness, and love for the land inspire everything we do.
           </p>
           <p className="text-light-blue mb-8 text-sm md:text-base">
             Fuentelo&apos;s is our tribute to him. We craft our sparkling grape juices from the very grapes he once tended—Airén and Tempranillo varieties grown in La Mancha. More than a beverage, Fuentelo&apos;s is a celebration of legacy, family, and the joyful spirit of Spanish life.
