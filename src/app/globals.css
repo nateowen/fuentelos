@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors */
+  --color-rose: #EC5756;
+  --color-light-rose: #E4938B;
+  --color-flavor-rose: #FFD1D1;
+  --color-white-grape: #FEBE48;
+  --color-white-grape-light: #FFF0C0;
+  --color-blue: #213551;
+  --color-light-blue: #4E7682;
+  --color-green: #74AA7D;
+  --color-neutral: #F4F1E3;
+  --color-white: #FFFFFF;
+  --color-brown: #91805E;
+  
+  /* Font Families */
+  --font-fisterra: "Fisterra Morte", serif;
+  --font-helvetica: "Helvetica Neue", Helvetica, Arial;
+  --font-futura: "Futura", "Futura PT", "Futura Std", sans-serif;
 }
 
 @theme inline {
+  --color-*: initial;
+  
+  /* Brand Colors */
+  --color-rose: #EC5756;
+  --color-light-rose: #E4938B;
+  --color-flavor-rose: #FFD1D1;
+  --color-white-grape: #FEBE48;
+  --color-white-grape-light: #FFF0C0;
+  --color-blue: #213551;
+  --color-light-blue: #4E7682;
+  --color-green: #74AA7D;
+  --color-neutral: #F4F1E3;
+  --color-white: #FFFFFF;
+  --color-brown: #91805E;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  /* Font Families */
+  --font-fisterra: "Fisterra Morte", serif;
+  --font-futura: "Futura", "Futura PT", "Futura Std", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #213551;
+    --foreground: #F4F1E3;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-futura);
+}
+
+/* Font face declaration for Fisterra Morte */
+@font-face {
+  font-family: "Fisterra Morte";
+  src: url("/fonts/FisterraMorte.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.navbar-glow {
+  box-shadow:
+    0 8px 32px 0 rgba(150, 255, 155, 0.35), /* green glow */
+    0 2px 8px 0 rgba(0,0,0,0.08);           /* subtle shadow */
+}
+
+.revealer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  transform-origin: center top;
+  background-color: var(--color-blue);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none !important;
+}
+
+::view-transition-group(root) {
+  z-index: auto !important;
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+  will-change: clip-path;
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 10000;
+  animation: none !important;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+  animation: none !important;
 }
