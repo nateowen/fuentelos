@@ -13,7 +13,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <div className="revealer hidden md:block"></div>
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center bg-white-grape-light h-screen overflow-hidden">
+      <section className="relative flex flex-col items-center bg-white-grape-light h-screen overflow-visible">
         <div className="flex flex-col items-center max-w-7xl pt-24 bg-white-grape-light px-4">
           <div className="flex items-center justify-center w-full pb-6 md:pb-20">
             <div className="hidden md:block">

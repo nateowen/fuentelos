@@ -3,6 +3,7 @@
 import Image from "next/image";
 import NutritionFacts from "@/components/NutritionFacts";
 import { useRevealer } from "@/hooks/useRevelear";
+import ServingSuggestionsSlider from "@/components/ServingSuggestionsSlider";
 
 const roseNutrition = [
   { label: "Calories", value: "110", dailyValue: "0%" },
@@ -151,7 +152,12 @@ export default function Beverages() {
           </div>
         </section>
       </div>
+
       <section className="w-full h-12 bg-gradient-to-b from-white-grape-light to-neutral" aria-hidden="true"></section>
+
+      {/* Serving Suggestions Slider */}
+      <ServingSuggestionsSlider />
+      
     </div>
   );
 } 

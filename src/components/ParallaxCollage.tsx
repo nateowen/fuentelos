@@ -61,8 +61,8 @@ const ParallaxCollage = () => {
       alt: "Kids",
       width: 300,
       height: 200,
-      speed: 0.7,
-      className: "absolute bottom-4 right-4 md:bottom-0 md:right-90 shadow-lg"
+      speed: 0.3,
+      className: "absolute bottom-4 right-4 md:bottom-20 md:right-90 shadow-lg"
     },
     {
       src: "/images/hero-slideshow/People by Pool.jpg",
@@ -71,6 +71,30 @@ const ParallaxCollage = () => {
       height: 180,
       speed: 0.5,
       className: "absolute bottom-20 left-4 md:bottom-15 md:left-90 shadow-lg"
+    },
+    {
+      src: "/images/hero-slideshow/Flower-Pot.jpeg",
+      alt: "Flower Pot",
+      width: 180,
+      height: 140,
+      speed: 0.4,
+      className: "absolute bottom-0 left-1/4 md:bottom-[-180] md:left-50 shadow-lg"
+    },
+    {
+      src: "/images/hero-slideshow/In-the-Sand.jpeg",
+      alt: "In the Sand",
+      width: 220,
+      height: 160,
+      speed: 0.25,
+      className: "absolute bottom-30 right-1/3 md:bottom-[-200] md:right-50 shadow-lg"
+    },
+    {
+      src: "/images/hero-slideshow/Shady-Day.jpg",
+      alt: "Shady Day",
+      width: 200,
+      height: 150,
+      speed: 0.4,
+      className: "absolute bottom-[-50] right-1/2 md:bottom-[-120] md:right-160 shadow-lg"
     },
   ];
 
@@ -97,7 +121,7 @@ const ParallaxCollage = () => {
   return (
     <div 
       ref={containerRef}
-      className="absolute inset-0 w-full h-full overflow-hidden"
+      className="absolute inset-0 w-full h-full overflow-visible"
     >
       {images.map((image, index) => (
         <div
@@ -110,7 +134,7 @@ const ParallaxCollage = () => {
             alt={image.alt}
             width={image.width/1.15}
             height={image.height/1.15}
-            className="object-cover rounded-2xl shadow-lg w-24 h-18 md:w-auto md:h-auto hover:scale-150 transition-transform duration-300"
+            className="object-cover rounded-2xl shadow-lg w-24 h-18 md:w-auto md:h-auto hover:scale-120 transition-transform duration-300"
           />
         </div>
       ))}

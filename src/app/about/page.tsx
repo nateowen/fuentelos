@@ -108,7 +108,7 @@ export default function About() {
       <section className="w-full bg-white-grape-light py-8 md:py-12 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-8">
           <div className="flex-1">
-            <h2 className="font-fisterra text-3xl sm:text-4xl md:text-5xl text-blue mb-4 md:mb-4">THE ESSENCE OF CASTILLA-LA MANCHA IN EVERY SIP</h2>
+            <h2 className="font-fisterra text-3xl sm:text-4xl md:text-5xl text-blue mb-4">THE ESSENCE OF CASTILLA-LA MANCHA IN EVERY SIP</h2>
             <p className="text-light-blue text-sm md:text-base">
               Experience the essence of Castilla-La Mancha with every sip of Fuentelo&apos;s Sparkling Grape Juice — a region where sun-drenched vineyards 
               stretch across the Spanish horizon and tradition runs deep in the soil. Crafted from hand-selected grapes grown in this historic heartland, 
