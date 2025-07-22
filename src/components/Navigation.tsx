@@ -43,6 +43,7 @@ const Navigation = () => {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Beverages", href: "/beverages" },
+    { name: "Blog", href: "/blog" },
   ];
 
   useEffect(() => {
