@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Fuentelo's - Celebrations, Recipes & Spanish Heritage",
+  title: "Blog | Fuentelo's",
   description: "Discover celebration ideas, serving suggestions, Spanish heritage stories, and recipes featuring Fuentelo's premium non-alcoholic sparkling grape juice.",
   keywords: [
     "celebration ideas",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Castilla-La Mancha"
   ],
   openGraph: {
-    title: "Blog | Fuentelo's - Celebrations, Recipes & Spanish Heritage",
+    title: "Blog | Fuentelo's",
     description: "Discover celebration ideas, serving suggestions, and Spanish heritage stories.",
   },
 };
@@ -49,35 +49,32 @@ const blogPosts = [
 
 export default function Blog() {
   return (
-    <div className="min-h-screen bg-white-grape-light">
+    <div className="min-h-screen bg-neutral">
       <div className="max-w-6xl mx-auto px-4 py-24">
         <h1 className="text-4xl md:text-6xl font-fisterra text-blue text-center mb-8">
           Stories & Celebrations
         </h1>
-        <p className="text-lg text-light-blue text-center mb-12 max-w-3xl mx-auto">
-          Discover celebration ideas, serving suggestions, and the rich Spanish heritage behind every bottle of Fuentelo&apos;s.
-        </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <article key={post.id} className="bg-blue rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-rose font-semibold">{post.category}</span>
+                  <span className="text-sm text-light-blue font-semibold">{post.category}</span>
                   <time className="text-sm text-light-blue">{new Date(post.date).toLocaleDateString()}</time>
                 </div>
-                <h2 className="text-xl font-fisterra text-blue mb-3 hover:text-rose transition-colors">
+                <h2 className="text-xl font-fisterra text-green mb-3">
                   {post.title}
                 </h2>
-                <p className="text-light-blue mb-4 line-clamp-3">
+                <p className="text-neutral mb-8 line-clamp-3">
                   {post.excerpt}
                 </p>
-                <a 
+                {/* <a 
                   href={`/blog/${post.slug}`}
-                  className="inline-block bg-green text-white-grape-light px-4 py-2 rounded-full text-sm font-semibold hover:bg-green/90 transition-colors"
+                  className="inline-block w-full text-center border-2 border-green text-green px-4 py-2 rounded-full text-sm font-semibold hover:bg-green/90 hover:text-blue transition-colors"
                 >
                   Read More
-                </a>
+                </a> */}
               </div>
             </article>
           ))}

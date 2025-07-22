@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AboutClient from "./client";
 
 export const metadata: Metadata = {
-  title: "About Fuentelo's | Our Spanish Heritage & Legacy",
+  title: "About Us | Our Spanish Heritage & Legacy",
   description: "Discover Fuentelo's story rooted in Spain's winemaking heritage. Learn about our family legacy, Castilla-La Mancha vineyards, and commitment to crafting premium non-alcoholic sparkling grape juice.",
   keywords: [
     "Fuentelo's story",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Spanish tradition"
   ],
   openGraph: {
-    title: "About Fuentelo's | Our Spanish Heritage & Legacy",
+    title: "About Us | Our Spanish Heritage & Legacy",
     description: "Discover Fuentelo's story rooted in Spain's winemaking heritage. Learn about our family legacy and commitment to crafting premium non-alcoholic sparkling grape juice.",
     images: ['/images/Abuelos.jpg'],
   },

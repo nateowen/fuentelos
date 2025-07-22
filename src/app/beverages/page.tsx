@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BeveragesClient from "./client";
 
 export const metadata: Metadata = {
-  title: "Our Beverages | Fuentelo's Rosé & White Sparkling Grape Juice",
+  title: "Beverages | Fuentelo's Sparkling Grape Juice",
   description: "Explore Fuentelo's premium non-alcoholic sparkling grape juices: Rosé from Tempranillo grapes and White from Airén grapes. 100% natural, zero added sugars, perfect for celebrations.",
   keywords: [
     "Fuentelo's Rosé",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "premium grape juice"
   ],
   openGraph: {
-    title: "Our Beverages | Fuentelo's Rosé & White Sparkling Grape Juice",
+    title: "Beverages | Fuentelo's Sparkling Grape Juice",
     description: "Explore Fuentelo's premium non-alcoholic sparkling grape juices: Rosé from Tempranillo grapes and White from Airén grapes.",
     images: ['/labels/Rose.png', '/labels/White.png'],
   },

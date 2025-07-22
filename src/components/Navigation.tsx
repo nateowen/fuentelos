@@ -95,12 +95,12 @@ const Navigation = () => {
             ))}
           </div>
 
-          <Link 
-            href="/"
+          <a 
+            href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
             className="text-base text-white-grape border-2 border-white-grape font-black rounded-full px-4 py-1 hover:bg-white-grape hover:text-light-blue hover:border-white-grape transition-colors"
           >
-            LINKTREE
-          </Link>
+            FOLLOW US
+          </a>
         </div>
       </div>
 
@@ -142,6 +142,13 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+            </div>
+            <div className="flex justify-center py-4">
+              <a href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
+                className="text-base text-white-grape border-2 border-white-grape font-black rounded-full px-4 py-2 text-center"
+              >
+                FOLLOW US
+              </a>
             </div>
           </div>
         </div>
