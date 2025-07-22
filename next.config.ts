@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Disabled to avoid critters dependency
   },
   compress: true,
   poweredByHeader: false,
