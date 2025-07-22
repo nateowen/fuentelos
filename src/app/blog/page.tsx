@@ -55,7 +55,7 @@ export default function Blog() {
           Stories & Celebrations
         </h1>
         <p className="text-lg text-light-blue text-center mb-12 max-w-3xl mx-auto">
-          Discover celebration ideas, serving suggestions, and the rich Spanish heritage behind every bottle of Fuentelo's.
+          Discover celebration ideas, serving suggestions, and the rich Spanish heritage behind every bottle of Fuentelo&apos;s.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
