@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import Image from "next/image";
 
 const servingImages = [
   { src: "/images/serving-suggestions/Assorted Hummus.jpg", title: "Assorted Hummus" },
@@ -52,7 +51,7 @@ export default function SuggestionsSlider() {
   const trackRef = useRef<HTMLDivElement>(null);
   const slidesRef = useRef<HTMLDivElement[]>([]);
   const animationFrameRef = useRef<number | undefined>(undefined);
-  const [isInitialized, setIsInitialized] = useState(false);
+  const [_isInitialized, setIsInitialized] = useState(false);
 
   const stateRef = useRef<SliderState>({
     currentX: 0,
@@ -160,7 +159,6 @@ export default function SuggestionsSlider() {
 
   const updateParallax = useCallback(() => {
     const viewportCenter = window.innerWidth / 2;
-    const state = stateRef.current;
 
     slidesRef.current.forEach((slide) => {
       const img = slide.querySelector('img') as HTMLImageElement;
@@ -241,7 +239,7 @@ export default function SuggestionsSlider() {
     state.lastScrollTime = Date.now();
   }, []);
 
-  const handleTouchEnd = useCallback((e: TouchEvent) => {
+  const handleTouchEnd = useCallback(() => {
     const state = stateRef.current;
     state.isDragging = false;
     setTimeout(() => {
@@ -278,7 +276,7 @@ export default function SuggestionsSlider() {
     state.lastScrollTime = Date.now();
   }, []);
 
-  const handleMouseUp = useCallback((e: MouseEvent) => {
+  const handleMouseUp = useCallback(() => {
     const state = stateRef.current;
     state.isDragging = false;
     setTimeout(() => {
