@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useCallback } from "react";
 
 const servingImages = [
   { src: "/images/serving-suggestions/Assorted Hummus.jpg", title: "Assorted Hummus" },
