@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import NutritionFacts from "@/components/NutritionFacts";
-import { useRevealer } from "@/hooks/useRevelear";
-import ServingSuggestionsSlider from "@/components/ServingSuggestionsSlider";
+import SuggestionsSlider from "@/components/SuggestionsSlider";
 
 const roseNutrition = [
   { label: "Calories", value: "110", dailyValue: "0%" },
@@ -28,13 +27,9 @@ const whiteNutrition = [
 ];
 
 export default function BeveragesClient() {
-  useRevealer();
-
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-flavor-rose via-white-grape-light to-white-grape-light">
-      <div className="revealer hidden md:block"></div>
-
-      <div className="max-w-6xl mx-auto px-4 pb-12 overflow-hidden md:overflow-visible">
+      <div className="max-w-6xl mx-auto px-4  overflow-hidden md:overflow-visible">
         <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-fisterra text-blue pt-24 pb-12 tracking-normal">Meet the Flavors!</h1>
 
         {/* ROSÉ SECTION */}
@@ -153,11 +148,18 @@ export default function BeveragesClient() {
         </section>
       </div>
 
-      <section className="w-full h-12 bg-gradient-to-b from-white-grape-light to-neutral" aria-hidden="true"></section>
+      <section className="w-full flex flex-col items-center justify-center pt-12 md:pt-24">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-fisterra text-blue mb-4">PERFECT PAIRINGS</h2>
+        <p className="text-center text-blue/90 text-base px-4">Discover the perfect accompaniments for your Fuentelo&apos;s experience. 
+          From artisanal cheeses to fresh fruits, these pairings enhance every sip.
+        </p>
+      </section>
 
       {/* Serving Suggestions Slider */}
-      <ServingSuggestionsSlider />
-      
+      <SuggestionsSlider />
+
+
+      <section className="w-full h-24 md:h-36 bg-gradient-to-b from-white-grape-light to-neutral" aria-hidden="true"></section>
     </div>
   );
 } 

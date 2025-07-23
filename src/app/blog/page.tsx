@@ -59,14 +59,14 @@ export default function Blog() {
           {blogPosts.map((post) => (
             <article key={post.id} className="bg-blue rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-light-blue font-semibold">{post.category}</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm text-light-blue">{post.category}</span>
                   <time className="text-sm text-light-blue">{new Date(post.date).toLocaleDateString()}</time>
                 </div>
-                <h2 className="text-xl font-fisterra text-green mb-3">
+                <h2 className="text-xl font-fisterra text-neutral mb-2">
                   {post.title}
                 </h2>
-                <p className="text-neutral mb-8 line-clamp-3">
+                <p className="text-sm text-green/80 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
                 {/* <a 

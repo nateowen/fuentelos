@@ -3,7 +3,6 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
-import { ViewTransitions } from "next-view-transitions";
 
 export const metadata: Metadata = {
   title: {
@@ -83,21 +82,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en">
-        <head>
-          <StructuredData />
-        </head>
-        <body
-          className="antialiased"
-        >
-          <Navigation />
-          <main>
-            {children}
-          </main>
-          <Footer />
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en">
+      <head>
+        <StructuredData />
+      </head>
+      <body
+        className="antialiased"
+      >
+        <Navigation />
+        <main>
+          {children}
+        </main>
+        <Footer />
+      </body>
+    </html>
   );
 }

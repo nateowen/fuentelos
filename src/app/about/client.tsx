@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useRevealer } from "@/hooks/useRevelear";
 
 // const STORES = [
 //   { name: "Gelson's", logo: "/images/stores/Gelsons.svg" },
@@ -21,16 +20,13 @@ const TEAM = [
 ];
 
 export default function AboutClient() {
-  useRevealer();
-
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="revealer hidden md:block"></div>
 
       {/* Header & Values Section */}
       <section className="w-full bg-neutral relative overflow-hidden pt-24">
         {/* Background Windmill */}
-        <div className="absolute inset-0 flex items-center justify-end">
+        {/* <div className="absolute inset-0 flex items-center justify-end">
           <Image 
             src="/icons/Windmill.svg" 
             alt="Windmill background" 
@@ -38,7 +34,7 @@ export default function AboutClient() {
             height={800}
             className="opacity-40 w-48 h-48 hidden md:block md:w-auto md:h-auto"
           />
-        </div>
+        </div> */}
         
         <div className="max-w-6xl mx-auto px-4 pb-6 md:pb-12 relative z-10">
           <div className="flex flex-col items-start mb-8 md:mb-10">
@@ -50,21 +46,21 @@ export default function AboutClient() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-left">
-            <div>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra text-rose mb-2">Celebration</h3>
-              <p className="text-rose text-sm md:text-base">Our drinks are made to elevate life&apos;s moments, turning everyday gatherings into unforgettable occasions.</p>
+            <div className="border-l-2 border-rose text-rose pl-4">
+              <h3 className="text-xl sm:text-2xl md:text-4xl font-fisterra mb-2">Celebration</h3>
+              <p className="text-sm md:text-base">Our drinks are made to elevate life&apos;s moments, turning everyday gatherings into unforgettable occasions.</p>
             </div>
-            <div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra text-rose mb-2">Excellence</h3>
-                <p className="text-rose text-sm md:text-base">From vineyard to bottle, we uphold the highest standards to deliver a premium sparkling grape juice.</p>
+            <div className="border-l-2 border-rose text-rose pl-4">
+                <h3 className="text-xl sm:text-2xl md:text-4xl font-fisterra mb-2">Excellence</h3>
+                <p className="text-sm md:text-base">From vineyard to bottle, we uphold the highest standards to deliver a premium sparkling grape juice.</p>
             </div>
-            <div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra text-white-grape mb-2">Grit</h3>
-                <p className="text-white-grape text-sm md:text-base">Born from generations of farmers, we carry forward their relentless work ethic, perseverance, and determination in every bottle to meet you at the milestones you&apos;re chasing.</p>
+            <div className="border-l-2 border-white-grape text-white-grape pl-4">
+                <h3 className="text-xl sm:text-2xl md:text-4xl font-fisterra mb-2">Grit</h3>
+                <p className="text-sm md:text-base">Born from generations of farmers, we carry forward their relentless work ethic, perseverance, and determination in every bottle to meet you at the milestones you&apos;re chasing.</p>
             </div>
-            <div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra text-white-grape mb-2">Tradition</h3>
-                <p className="text-white-grape text-sm md:text-base">We believe tradition connects us to the moments and values that matter most. In every bottle, we honor the rituals of gathering, celebrating, and creating memories that stand the test of time.</p>
+            <div className="border-l-2 border-white-grape text-white-grape pl-4">
+                <h3 className="text-xl sm:text-2xl md:text-4xl font-fisterra mb-2">Tradition</h3>
+                <p className="text-sm md:text-base">We believe tradition connects us to the moments and values that matter most. In every bottle, we honor the rituals of gathering, celebrating, and creating memories that stand the test of time.</p>
             </div>
 
             {/* {VALUES.map((v) => (
@@ -165,7 +161,7 @@ export default function AboutClient() {
       <section className="w-full bg-neutral py-8 md:py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="font-fisterra text-2xl sm:text-3xl md:text-5xl text-blue mb-4 md:mb-4">CONTACT US</h2>
-          <div className="text-blue text-sm md:text-base">
+          <div className="text-light-blue text-sm md:text-base">
             <div>123 Celebration Lane, Napa Valley, CA 94558</div>
             <div>707.555.1234</div>
           </div>

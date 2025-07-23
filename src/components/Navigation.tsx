@@ -2,39 +2,10 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 
 const Navigation = () => {
-  const router = useTransitionRouter();
   const pathname = usePathname();
-
-  function triggerPageTransition() {
-    document.documentElement.animate([
-        {
-          clipPath: "circle(0% at 50% 50%)",
-        },
-        {
-          clipPath: "circle(150% at 50% 50%)",
-        },
-      ],
-      {
-        duration: 2000,
-        easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-        pseudoElement: "::view-transition-new(root)",
-      }
-    );
-  };
-
-  const handleNavigation = (path: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (pathname === path) {
-      e.preventDefault();
-      return;
-    }
-    router.push(path, {
-      onTransitionReady: triggerPageTransition,
-    })
-  };
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -70,13 +41,12 @@ const Navigation = () => {
   return (
     <nav>
       {/* Desktop Navigation */}
-      <div className="fixed top-0 left-0 right-0 z-50 mx-12 bg-light-blue hidden md:block rounded-b-3xl shadow-lg">
+      <div className="fixed top-0 left-0 right-0 z-50 mx-12 bg-light-blue border-b-3 border-x-3 border-blue hidden md:block rounded-b-3xl shadow-lg">
         <div className="py-4 px-8 flex items-center justify-between">
           {/* FUENTELO'S Link */}
           <Link 
             href="/"
             className="font-fisterra text-3xl lg:text-4xl text-neutral transition-colors"
-            onClick={handleNavigation("/")}
           >
             Fuentelo&apos;s
           </Link>
@@ -88,7 +58,6 @@ const Navigation = () => {
                 key={item.name} 
                 href={item.href}
                 className="text-base text-neutral hover:text-white-grape transition-colors"
-                onClick={handleNavigation(item.href)}
               >
                 {item.name}
               </Link>
@@ -97,7 +66,7 @@ const Navigation = () => {
 
           <a 
             href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
-            className="text-base text-white-grape border-2 border-white-grape font-black rounded-full px-4 py-1 hover:bg-white-grape hover:text-light-blue hover:border-white-grape transition-colors"
+            className="text-xl text-white-grape border-1 border-white-grape font-fisterra tracking-wider rounded-full px-4 py-1 hover:bg-white-grape hover:text-light-blue hover:border-white-grape transition-colors"
           >
             FOLLOW US
           </a>
@@ -129,8 +98,8 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu - expands underneath header */}
-        <div className={`overflow-hidden transition-all duration-300 ${mobileOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="px-4 pb-8">
+        <div className={`overflow-hidden transition-all duration-300 ${mobileOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="px-4">
             <div className="flex flex-col space-y-6">
               {navItems.map((item) => (
                 <Link 
@@ -143,9 +112,9 @@ const Navigation = () => {
                 </Link>
               ))}
             </div>
-            <div className="flex justify-center py-4">
+            <div className="flex justify-center pt-8 pb-4">
               <a href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
-                className="text-base text-white-grape border-2 border-white-grape font-black rounded-full px-4 py-2 text-center"
+                className="text-xl text-white-grape border-1 border-white-grape font-fisterra tracking-wider rounded-full px-8 py-2 text-center"
               >
                 FOLLOW US
               </a>

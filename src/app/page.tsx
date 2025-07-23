@@ -4,11 +4,8 @@ import Image from "next/image";
 import MissionSlideshow from "@/components/MissionSlideshow";
 import ParallaxCollage from "@/components/ParallaxCollage";
 import ParallaxCollageMobile from "@/components/ParallaxCollageMobile";
-import { useRevealer } from "@/hooks/useRevelear";
 
 export default function Home() {
-  useRevealer();
-
   return (
     <div className="min-h-screen flex flex-col">
       <div className="revealer hidden md:block"></div>
@@ -78,7 +75,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
               <div className="flex-1 text-left mb-6 md:mb-0">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra mb-2 text-green">Harvest</h3>
-                <p className="text-sm md:text-base text-green">
+                <p className="text-sm md:text-base text-light-blue">
                   Harvesting begins when our Tempranillo and Airén grapes reach peak ripeness, typically in late summer. 
                   Timing is crucial—each grape is handpicked at the ideal moment to ensure vibrant flavor and balanced acidity. 
                   Early morning harvesting preserves freshness and prevents unwanted fermentation. 
@@ -93,7 +90,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
               <div className="flex-1 text-left mb-6 md:mb-0">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra mb-2 text-white-grape">Juice</h3>
-                <p className="text-sm md:text-base text-white-grape">
+                <p className="text-sm md:text-base text-light-blue">
                 Once harvested, the grapes are gently pressed to extract their juice without compromising flavor or aroma. 
                 We use a cold-press method to preserve the grapes&apos; natural freshness and prevent oxidation. 
                 Our white Airén grapes produce a clean, crisp juice with subtle floral notes, while brief contact with Tempranillo skins gives our rosé its soft hue. 
@@ -108,7 +105,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
               <div className="flex-1 text-left mb-6 md:mb-0">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-fisterra mb-2 text-rose">Carbonate & Bottle</h3>
-                <p className="text-sm md:text-base text-light-rose">
+                <p className="text-sm md:text-base text-light-blue">
                 After juicing, the pure grape juices are delicately carbonated to create a fine, refreshing sparkle. 
                 We add just 20% purified water to balance sweetness and enhance drinkability without diluting the natural flavors. 
                 The beverage is then bottled under pressure in elegant glass bottles to preserve its effervescence and freshness—ensuring every sip is as crisp and celebratory as the moment it was sealed.

@@ -28,11 +28,11 @@ const MISSION_IMAGES = [
 export default function MissionSlideshow() {
   return (
     <div className="w-full max-w-6xl mx-auto px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
         {MISSION_IMAGES.map((image, index) => (
           <div
             key={index}
-            className="relative h-48 sm:h-56 md:h-80 overflow-hidden rounded-3xl shadow-xl"
+            className="relative h-48 sm:h-56 md:h-80 overflow-hidden rounded-4xl shadow-xl"
           >
             <Image
               src={image.src}
