@@ -51,7 +51,6 @@ export default function SuggestionsSlider() {
   const trackRef = useRef<HTMLDivElement>(null);
   const slidesRef = useRef<HTMLDivElement[]>([]);
   const animationFrameRef = useRef<number | undefined>(undefined);
-  const [_isInitialized, setIsInitialized] = useState(false);
 
   const stateRef = useRef<SliderState>({
     currentX: 0,
@@ -325,7 +324,6 @@ export default function SuggestionsSlider() {
     initializeSlides();
     const cleanup = initializeEventListeners();
     animate();
-    setIsInitialized(true);
     return cleanup;
   }, [initializeSlides, initializeEventListeners, animate]);
 
