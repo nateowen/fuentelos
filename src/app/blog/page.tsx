@@ -57,7 +57,7 @@ export default function Blog() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <article key={post.id} className="bg-blue rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <article key={post.id} className="bg-blue rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm text-light-blue">{post.category}</span>
@@ -69,12 +69,12 @@ export default function Blog() {
                 <p className="text-sm text-green/80 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-                {/* <a 
+                <a 
                   href={`/blog/${post.slug}`}
                   className="inline-block w-full text-center border-2 border-green text-green px-4 py-2 rounded-full text-sm font-semibold hover:bg-green/90 hover:text-blue transition-colors"
                 >
                   Read More
-                </a> */}
+                </a>
               </div>
             </article>
           ))}

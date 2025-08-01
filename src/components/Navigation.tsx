@@ -11,7 +11,7 @@ const Navigation = () => {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Beverages", href: "/beverages" },
-    { name: "Blog", href: "/blog" },
+    // { name: "Blog", href: "/blog" },
   ];
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const Navigation = () => {
   return (
     <nav>
       {/* Desktop Navigation */}
-      <div className="fixed top-0 left-0 right-0 z-50 mx-12 bg-light-blue border-b-3 border-x-3 border-blue hidden md:block rounded-b-3xl shadow-lg">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-blue border-b-4 border-light-blue hidden md:block shadow-lg">
         <div className="py-4 px-8 flex items-center justify-between">
           {/* FUENTELO'S Link */}
           <Link 
@@ -54,16 +54,22 @@ const Navigation = () => {
               <Link 
                 key={item.name} 
                 href={item.href}
-                className="text-base text-neutral hover:text-white-grape transition-colors"
+                className="text-base text-neutral uppercase hover:text-white-grape transition-colors"
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
+          {/* <a 
+            href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
+            className="text-xl text-white-grape border-1 border-white-grape font-fisterra tracking-wider rounded-full px-4 py-1 hover:bg-white-grape hover:text-blue hover:border-white-grape transition-colors"
+          >
+            FOLLOW US
+          </a> */}
           <a 
             href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
-            className="text-xl text-white-grape border-1 border-white-grape font-fisterra tracking-wider rounded-full px-4 py-1 hover:bg-white-grape hover:text-light-blue hover:border-white-grape transition-colors"
+            className="text-xl text-blue bg-white-grape font-fisterra tracking-wider rounded-full px-4 py-1 hover:scale-110 hover:bg-rose transition-all duration-300"
           >
             FOLLOW US
           </a>
@@ -102,7 +108,7 @@ const Navigation = () => {
                 <Link 
                   key={item.name} 
                   href={item.href}
-                  className="text-lg text-neutral transition-colors text-center"
+                  className="text-md text-neutral uppercase transition-colors text-center"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.name}
@@ -111,7 +117,7 @@ const Navigation = () => {
             </div>
             <div className="flex justify-center pt-8 pb-4">
               <a href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
-                className="text-xl text-white-grape border-1 border-white-grape font-fisterra tracking-wider rounded-full px-8 py-2 text-center"
+                className="text-xl text-blue bg-white-grape font-fisterra tracking-wider rounded-full px-8 py-2 text-center"
               >
                 FOLLOW US
               </a>
