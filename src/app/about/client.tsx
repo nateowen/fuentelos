@@ -41,7 +41,7 @@ const TEAM = [
   {
     name: "Sofia Stewart",
     role: "Social Media Manager",
-    headshot: "/headshots/Sofia Stewart Headshot.JPG",
+    headshot: "/headshots/Sofia Stewart Headshot 2.JPG",
   },
 ];
 
