@@ -26,22 +26,27 @@ const TEAM = [
   {
     name: "Rosa de la Fuente",
     role: "COO",
-    headshot: "/headshots/Rosa de la Fuente Headshot.jpeg",
+    headshot: "/headshots/rosa.jpg",
   },
   {
     name: "Karen Gudmundson",
     role: "Business Development",
     headshot: "/headshots/Karen Gudmundson Headshot.jpg",
   },
-  {
-    name: "Jose Luis de la Fuente",
-    role: "Beverage Operations & Sales",
-    headshot: "/headshots/Jose Luis Headshot.JPG",
-  },
+  // {
+  //   name: "Jose Luis de la Fuente",
+  //   role: "Beverage Operations & Sales",
+  //   headshot: "/headshots/Jose Luis Headshot.JPG",
+  // },
   {
     name: "Sofia Stewart",
     role: "Social Media Manager",
-    headshot: "/headshots/Sofia Stewart Headshot 2.JPG",
+    headshot: "/headshots/sofia.jpg",
+  },  
+  {
+    name: "Nate Owen",
+    role: "CTO",
+    headshot: "/headshots/nate.jpg",
   },
 ];
 
