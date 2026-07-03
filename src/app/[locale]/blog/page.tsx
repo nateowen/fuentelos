@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Blog | Fuentelo's",
-  description: "Discover celebration ideas, serving suggestions, Spanish heritage stories, and recipes featuring Fuentelo's premium non-alcoholic sparkling grape juice.",
-  keywords: [
-    "celebration ideas",
-    "serving suggestions",
-    "Spanish heritage",
-    "non-alcoholic recipes",
-    "sparkling grape juice recipes",
-    "celebration drinks",
-    "party planning",
-    "Spanish culture",
-    "Castilla-La Mancha"
-  ],
-  openGraph: {
-    title: "Blog | Fuentelo's",
-    description: "Discover celebration ideas, serving suggestions, and Spanish heritage stories.",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: t("blogTitle"),
+    description: t("blogDescription"),
+    openGraph: {
+      title: t("blogTitle"),
+      description: t("blogDescription"),
+    },
+  };
+}
 
 const blogPosts = [
   {
@@ -47,21 +46,30 @@ const blogPosts = [
   }
 ];
 
-export default function Blog() {
+export default async function Blog({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Blog" });
+  const dateLocale = locale === "es" ? "es-ES" : "en-US";
+
   return (
     <div className="min-h-screen bg-neutral">
       <div className="max-w-6xl mx-auto px-4 py-24">
         <h1 className="text-4xl md:text-6xl font-fisterra text-blue text-center mb-8">
-          Stories & Celebrations
+          {t("title")}
         </h1>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
             <article key={post.id} className="bg-blue rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm text-light-blue">{post.category}</span>
-                  <time className="text-sm text-light-blue">{new Date(post.date).toLocaleDateString()}</time>
+                  <time className="text-sm text-light-blue">{new Date(post.date).toLocaleDateString(dateLocale)}</time>
                 </div>
                 <h2 className="text-xl font-fisterra text-neutral mb-2">
                   {post.title}
@@ -69,11 +77,11 @@ export default function Blog() {
                 <p className="text-sm text-green/80 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-                <a 
+                <a
                   href={`/blog/${post.slug}`}
                   className="inline-block w-full text-center border-2 border-green text-green px-4 py-2 rounded-full text-sm font-semibold hover:bg-green/90 hover:text-blue transition-colors"
                 >
-                  Read More
+                  {t("readMore")}
                 </a>
               </div>
             </article>
@@ -82,4 +90,4 @@ export default function Blog() {
       </div>
     </div>
   );
-} 
+}

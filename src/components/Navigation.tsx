@@ -1,35 +1,67 @@
 "use client";
 
-import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+
+const LanguageSwitcher = ({ onNavigate }: { onNavigate?: () => void }) => {
+  const pathname = usePathname();
+  const activeLocale = useLocale();
+  const t = useTranslations("Nav");
+
+  return (
+    <div className="flex items-center gap-2" aria-label={t("language")}>
+      {routing.locales.map((locale, index) => (
+        <span key={locale} className="flex items-center gap-2">
+          {index > 0 && <span className="text-neutral/40">/</span>}
+          <Link
+            href={pathname}
+            locale={locale}
+            onClick={onNavigate}
+            aria-current={locale === activeLocale ? "true" : undefined}
+            className={`text-sm uppercase transition-colors ${
+              locale === activeLocale
+                ? "text-white-grape font-semibold"
+                : "text-neutral hover:text-white-grape"
+            }`}
+          >
+            {locale === "es" ? t("spanish") : t("english")}
+          </Link>
+        </span>
+      ))}
+    </div>
+  );
+};
 
 const Navigation = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const t = useTranslations("Nav");
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Beverages", href: "/beverages" },
-    // { name: "Blog", href: "/blog" },
+    { name: t("home"), href: "/" },
+    { name: t("about"), href: "/about" },
+    { name: t("beverages"), href: "/beverages" },
+    // { name: t("blog"), href: "/blog" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Show navbar when scrolling up, hide when scrolling down
       if (currentScrollY < lastScrollY) {
         setIsVisible(true);
       } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       }
-      
+
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -41,7 +73,7 @@ const Navigation = () => {
       <div className="fixed top-0 left-0 right-0 z-50 bg-blue border-b-4 border-light-blue hidden md:block shadow-lg">
         <div className="py-4 px-8 flex items-center justify-between">
           {/* FUENTELO'S Link */}
-          <Link 
+          <Link
             href="/"
             className="font-fisterra text-3xl lg:text-4xl text-neutral transition-colors"
           >
@@ -51,8 +83,8 @@ const Navigation = () => {
           {/* Navigation Items */}
           <div className="flex flex-row gap-12">
             {navItems.map((item) => (
-              <Link 
-                key={item.name} 
+              <Link
+                key={item.href}
                 href={item.href}
                 className="text-base text-neutral uppercase hover:text-white-grape transition-colors"
               >
@@ -61,18 +93,15 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* <a 
-            href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
-            className="text-xl text-white-grape border-1 border-white-grape font-fisterra tracking-wider rounded-full px-4 py-1 hover:bg-white-grape hover:text-blue hover:border-white-grape transition-colors"
-          >
-            FOLLOW US
-          </a> */}
-          <a 
-            href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
-            className="text-xl text-blue bg-white-grape font-fisterra tracking-wider rounded-full px-4 py-1 hover:scale-110 hover:bg-rose transition-all duration-300"
-          >
-            FOLLOW US
-          </a>
+          <div className="flex items-center gap-6">
+            <LanguageSwitcher />
+            <a
+              href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
+              className="text-xl text-blue bg-white-grape font-fisterra tracking-wider rounded-full px-4 py-1 hover:scale-110 hover:bg-rose transition-all duration-300"
+            >
+              {t("followUs")}
+            </a>
+          </div>
         </div>
       </div>
 
@@ -81,7 +110,7 @@ const Navigation = () => {
         {/* Header portion */}
         <div className="p-4 flex justify-between items-center">
           {/* FUENTELO'S Link */}
-          <Link 
+          <Link
             href="/"
             className="font-fisterra text-2xl text-neutral transition-colors"
           >
@@ -92,7 +121,7 @@ const Navigation = () => {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="flex flex-col justify-center items-center w-8 h-8 space-y-1"
-            aria-label="Toggle mobile menu"
+            aria-label={t("toggleMenu")}
           >
             <span className={`block w-6 h-0.5 bg-neutral transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
             <span className={`block w-6 h-0.5 bg-neutral transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`}></span>
@@ -101,12 +130,12 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu - expands underneath header */}
-        <div className={`overflow-hidden transition-all duration-300 ${mobileOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className={`overflow-hidden transition-all duration-300 ${mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="px-4">
             <div className="flex flex-col space-y-6">
               {navItems.map((item) => (
-                <Link 
-                  key={item.name} 
+                <Link
+                  key={item.href}
                   href={item.href}
                   className="text-md text-neutral uppercase transition-colors text-center"
                   onClick={() => setMobileOpen(false)}
@@ -115,11 +144,14 @@ const Navigation = () => {
                 </Link>
               ))}
             </div>
-            <div className="flex justify-center pt-8 pb-4">
+            <div className="flex justify-center pt-6">
+              <LanguageSwitcher onNavigate={() => setMobileOpen(false)} />
+            </div>
+            <div className="flex justify-center pt-6 pb-4">
               <a href="https://www.instagram.com/drinkfuentelos/" target="_blank" rel="noopener noreferrer"
                 className="text-xl text-blue bg-white-grape font-fisterra tracking-wider rounded-full px-8 py-2 text-center"
               >
-                FOLLOW US
+                {t("followUs")}
               </a>
             </div>
           </div>
